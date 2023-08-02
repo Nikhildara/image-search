@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.bg-container{
+    padding:10px;
+}
+.head{
+    text-align: center;
+    font-size:35px;
+    color: rgb(21, 32, 44);
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inputSearch{
+    border:none;
+    border-radius: 3px;
+    padding:10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width:40%;
+    max-width:400px;
+    height:35px;
+    font-size:14px;
+    color: rgb(17, 11, 3);
+}
+
+.searchbtn{
+    background-color: rgb(9, 163, 112);
+    padding:5px 20px;
+    color:white;
+    border:none;
+    font-size:15px;
+    height:35px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-left:10px;
+}
+.search_results{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin:20px 10px;
+    padding:10px;
+}
+.search_result{
+    margin-bottom:60px;
+    width:30%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow:hidden;
+    flex-shrink:1;
+    transition: opacity 0.2s ease-in-out;
+}
+.search_result img{
+    width:100%;
+    height:100%; 
+    object-fit: cover;
+}
+.search_result:hover img{
+    opacity:0.8;
+}
+.search_result a{
+    color: rgb(35, 33, 33);
+    text-decoration: none;
+    font-size:12px;
+    padding:10px;
+    display: block;
+    text-transform:capitalize;
+}
+#showMore{
+    background-color: rgb(18, 187, 244);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding:7px;
+    width: 100px;
+    display: none;
+}
+.show_more{
+    display: flex;
+    justify-content: center;
+}
+.loader{
+    border:2px solid rgb(66, 208, 175);
+    border-radius:50%;
+    height:60px;
+    width:60px;
+    border-right-color:transparent;
+    animation: rot 1s linear infinite;
+    display: none; 
+}
+@keyframes rot{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.middle-loader{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px;
+}
+@media screen and (max-width:768px){
+    .search_result{
+        width:45%;
+    }
+}
+@media screen and (max-width:500px){
+    .search_result{
+        width:100%;
+    }
+}
